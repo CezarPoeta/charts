@@ -27,6 +27,7 @@ class DadosJSONView(BaseLineChartView):
 
         return labels
 
+
     def get_providers(self):
         #retorna o nome dos datasets
 
@@ -36,9 +37,7 @@ class DadosJSONView(BaseLineChartView):
             "Programação em C",
             "Programação em Java",
             "Programação em Python",
-            "Banco de Dados"
-        ]
-
+            "Banco de Dados"]
         return datasets
 
     def get_data(self):
@@ -51,18 +50,17 @@ class DadosJSONView(BaseLineChartView):
         for l in range(6):
             for c in range(12):
                 dado = [
-                    randint(1, 100), #Jan
-                    randint(1, 100), #Fev
-                    randint(1, 100), #Mar
-                    randint(1, 100), #Abr
-                    randint(1, 100), #Mai
-                    randint(1, 100), #Jun
-                    randint(1, 100), #Jul
-                    randint(1, 100), #Ago
-                    randint(1, 100), #Set
-                    randint(1, 100), #Out
-                    randint(1, 100), #Nov
-                    randint(1, 100)  #Dez
-                ]
+                    randint(1, 100), # Jan
+                    randint(1, 100), # Fev
+                    randint(1, 100), # Mar
+                    randint(1, 100), # Abr
+                    randint(1, 100), # Mai
+                    randint(1, 100), # Jun
+                    randint(1, 100), # Jul
+                    randint(1, 100), # Ago
+                    randint(1, 100), # Set
+                    randint(1, 100), # Out
+                    randint(1, 100), # Nov
+                    randint(1, 100) ]  # Dez
             dados.append(dado)
         return dados

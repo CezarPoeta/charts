@@ -29,11 +29,9 @@
     
     <script type="text\javascript" src="{% static 'js/Chart.min.js' %}"></script>
     <script type="text\javascript">
-        $.get('{% url "dados" %}', function(data){
+        $.get('{% url "dados" %}', function(data) {
             var ctx = $("#grafico").get(0).getContext("2d");
-            new Chart(ctx, {
-                type: 'line', data:data
-            });
+            new Chart(ctx, {type: 'line', data:data});
         });
     </script>
 </body>
