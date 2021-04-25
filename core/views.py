@@ -11,7 +11,7 @@ class DadosJSONView(BaseLineChartView):
 
     def get_labels(self):
         #retorna 12 labels para a representação do x
-        labels =  [
+        labels = [
             "Janeiro", 
             "Fevereiro", 
             "Março", 
@@ -24,7 +24,6 @@ class DadosJSONView(BaseLineChartView):
             "Outubro", 
             "Novembro", 
             "Dezembro"]
-
         return labels
 
 
@@ -41,11 +40,13 @@ class DadosJSONView(BaseLineChartView):
         return datasets
 
     def get_data(self):
-        #retorna 6 datasets para lotar o gráfico
-        #cada linha representa um dataset
-        #cada coluna representa um label
-        #a quantidade de dados precisa ser igual aos datasets/labels
-        #12 colunas 6 linhas
+        """
+        retorna 6 datasets para lotar o gráfico
+        cada linha representa um dataset
+        cada coluna representa um label
+        a quantidade de dados precisa ser igual aos datasets/labels
+        12 colunas 6 linhas
+        """
         dados = []
         for l in range(6):
             for c in range(12):
@@ -61,6 +62,6 @@ class DadosJSONView(BaseLineChartView):
                     randint(1, 100), # Set
                     randint(1, 100), # Out
                     randint(1, 100), # Nov
-                    randint(1, 100) ]  # Dez
+                    randint(1, 100)] # Dez
             dados.append(dado)
         return dados
